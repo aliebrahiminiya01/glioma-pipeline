@@ -1,0 +1,6 @@
+,C-index,95% CI low,95% CI high
+age + resection,0.619,0.579,0.66
+"+ volumes, expert masks",0.628,0.588,0.668
+"+ volumes, U-Net masks",0.614,0.573,0.655
+"+ shape, expert masks",0.634,0.593,0.673
+"+ shape, U-Net masks",0.608,0.565,0.651

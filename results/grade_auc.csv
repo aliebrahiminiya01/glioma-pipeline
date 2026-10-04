@@ -1,0 +1,4 @@
+,ROC AUC,95% CI low,95% CI high
+expert → expert,0.951,0.915,0.982
+auto → auto,0.92,0.873,0.962
+expert → auto,0.846,0.787,0.9
