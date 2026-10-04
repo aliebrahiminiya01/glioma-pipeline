@@ -62,7 +62,7 @@ def to_slices(image, label, zs, crop, size):
     label = label[s:s + crop, s:s + crop, zs]
     f = size / crop
     image = zoom(image, (f, f, 1, 1), order=1)
-    label = zoom(label, (f, f, 1), order=0)  # nearest neighbour: labels must stay whole numbers
+    label = zoom(label, (f, f, 1), order=0)  # nearest neighbor: labels must stay whole numbers
     return image.transpose(2, 3, 0, 1).astype(np.float16), label.transpose(2, 0, 1).astype(np.uint8)
 
 

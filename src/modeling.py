@@ -23,7 +23,7 @@ SEQUENCES = ("flair", "t1", "t1ce", "t2")
 def load_features(path) -> pd.DataFrame:
     """Load the radiomics table and add simple volume features.
 
-    Enhancing-tumour (ET) shape features are undefined when a tumour has no enhancing part. Those cases get
+    Enhancing-tumor (ET) shape features are undefined when a tumor has no enhancing part. Those cases get
     volume 0, an explicit `ET_present` flag, and 0 for the other ET shape features.
     """
     data = pd.read_csv(path)

@@ -5,15 +5,15 @@ mask can come from any folder, so the same features can be computed from the exp
 and from the U-Net masks.
 
 For each case:
-  * shape features (volume, surface, sphericity, ...) of the whole tumour (WT), tumour core (TC)
-    and enhancing tumour (ET);
+  * shape features (volume, surface, sphericity, ...) of the whole tumor (WT), tumor core (TC)
+    and enhancing tumor (ET);
   * first-order and texture features (GLCM, GLRLM, GLSZM) of each MRI sequence inside WT and TC.
 
-BraTS labels: 1 = necrotic / non-enhancing core, 2 = edema, 4 = enhancing tumour.
+BraTS labels: 1 = necrotic / non-enhancing core, 2 = edema, 4 = enhancing tumor.
 WT = {1, 2, 4}, TC = {1, 4}, ET = {4}.
 
 MRI intensities have no absolute scale, so every sequence is z-scored over brain voxels before extraction.
-Texture features of ET are not used: many low-grade tumours have no enhancing part at all, and the ET volume
+Texture features of ET are not used: many low-grade tumors have no enhancing part at all, and the ET volume
 (0 for those cases) already carries that information.
 
 Usage:
@@ -41,7 +41,7 @@ TEXTURE_REGIONS = ("WT", "TC")
 MIN_VOXELS = 30  # smaller regions give unstable texture features
 
 TEXTURE_SETTINGS = {
-    "binWidth": 0.25,          # on z-scored intensities: roughly 30-40 grey levels inside a tumour
+    "binWidth": 0.25,          # on z-scored intensities: roughly 30-40 gray levels inside a tumor
     "label": 1,
     "minimumROISize": MIN_VOXELS,
     "additionalInfo": False,
